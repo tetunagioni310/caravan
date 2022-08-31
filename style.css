@@ -10,18 +10,48 @@ a {
   text-decoration: none;
 }
 
+header, nav, h2, .main-visual, footer {
+  font-family: Chalkduster, "Bradley Hand", Courier, "Segoe Print", sans-serif;
+}
+
 header {
   width: 90%;
   padding: 15px 0;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+
 }
 
 header .heading {
   font-size: 32px;
 }
 
-.mainvisual {
+.social {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+
+.social i {
+  display: inline-block; 
+  margin-left: 20px;
+}
+
+
+.nav-list {
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.nav-list-item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.main-visual {
   width: 100%;
   height: 300px;
   background-image:url(img/mv.jpg);
@@ -46,18 +76,6 @@ header .heading {
   margin-top: 30px;
 }
 
-.nav-list {
-  text-align: center;
-  padding: 10px 0;
-  margin: 0 auto;
-}
-
-.nav-list-item {
-  list-style: none;
-  display: inline-block;
-  margin: 0 20px;
-}
-
 main {
   width: 800px;
   display: flex;
@@ -77,13 +95,33 @@ main {
   line-height: 0.6;
 }
 
+.blog-box {
+  padding-top: 50px;
+}
+
 .blog-item {
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid #f7f7f7;
   display: flex;
   justify-content: flex-start;
-  padding-top: 50px;
+}
+
+.blog-image {
+  height: 180px;
+}
+
+.blog-text {
+  padding: 25px 0 0 30px;
+}
+
+.blog-text-heading {
+  padding-bottom: 15px;
+}
+
+.blog-date {
+  font-size: 12px;
+  display: inline-block;
 }
 
 .category {
@@ -109,23 +147,6 @@ main {
   background-color: #acabab;
   border-radius: 3px;
   line-height: 30px;
-}
-
-.blog-image {
-  height: 180px;
-}
-
-.blog-text {
-  padding: 25px 0 0 30px;
-}
-
-.blog-text-heading {
-  padding-bottom: 15px;
-}
-
-.blog-date {
-  font-size: 12px;
-  display: inline-block;
 }
 
 .sidebar {
@@ -170,7 +191,7 @@ main {
 }
 
 .instagram-box:nth-child(odd) {
-  margin: 0 10px 10px 0;
+  margin-right: 10px;
 }
 
 .instagram-box:nth-child(1) {
@@ -209,5 +230,78 @@ footer {
   color: #fff;
 }
 
+/* スマートフォンサイズ（425px）以下の際に適用される設定 */
+@media screen and (max-width:425px) {
+  header {
+    width: 100%;
+  }
+
+  .nav-list {
+    width: 100%;
+  }
+
+  .nav-list-item {
+    margin: 0 0 10px 0;
+    width: 100%;
+  }
+
+  .social {
+    display: none;
+  }
+
+  .main-visual-content {
+    width: 100%;
+  }
+
+  main {
+    display:block;
+    width: 100%;
+  }
+
+  .blog {
+    width: 100%;
+    margin: 0;
+  }
+
+  .blog-box {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .blog-image {
+    width: 49%;
+  }
+
+  .blog-text {
+    width: 49%;
+    padding-top: 5px;
+  }
+
+  .category {
+    display: none;
+  }
+
+ .sidebar {
+   width: 100%;
+ }
+
+ .sidebar-contents {
+   padding-left: 3%;
+   padding-right: 3%;
+ }
+
+ .instagram-box {
+   width: 48%;
+   padding-top: 48%;
+ }
+
+  .instagram-box:nth-child(odd) {
+    margin-right: 4%;
+  }
+
+ .footer-text {
+   font-size: 12px;
+ }
+}
 
 
