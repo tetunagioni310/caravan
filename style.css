@@ -95,7 +95,7 @@ main {
   line-height: 0.6;
 }
 
-.blog-box {
+.blog .blog-box:first-of-type {
   padding-top: 50px;
 }
 
@@ -231,7 +231,7 @@ footer {
 }
 
 /* スマートフォンサイズ（425px）以下の際に適用される設定 */
-@media screen and (max-width:425px) {
+@media screen and (max-width: 425px) {
   header {
     width: 100%;
   }
@@ -277,10 +277,6 @@ footer {
     padding-top: 5px;
   }
 
-  .category {
-    display: none;
-  }
-
  .sidebar {
    width: 100%;
  }
@@ -298,10 +294,11 @@ footer {
   .instagram-box:nth-child(odd) {
     margin-right: 4%;
   }
+  
+  .pagination {
+    margin-bottom: 50px;
+  }
 
- .footer-text {
-   font-size: 12px;
- }
 }
 
 
